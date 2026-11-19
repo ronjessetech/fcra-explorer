@@ -52,6 +52,10 @@ const DEDICATED_REPORTS: Record<string, { filename: string; title: string }> = {
   '231660618': {
     filename: 'Goonj_FCRA_231660618_Funding_Report.pdf',
     title: 'Download verified 3-page PDF due diligence report for Goonj'
+  },
+  '231660712': {
+    filename: 'Smile_Foundation_FCRA_231660712_Funding_Report.pdf',
+    title: 'Download verified 3-page PDF due diligence report for Smile Foundation'
   }
 };
 

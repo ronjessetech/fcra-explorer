@@ -2120,7 +2120,10 @@ export const sampleOrganisations: Organisation[] = [
       isMainSBIAccount: true
     },
     filingHistory: [
-      { financialYear: "2023-24", status: "Filed", amountReceivedINR: 215000000, filingDate: "2024-11-15", auditorRemarks: "Mission Education & Smile on Wheels mobile medical units verified." }
+      { financialYear: "2024-25", status: "Filed", amountReceivedINR: 184809000, filingDate: "2025-11-14", auditorRemarks: "Mission Education digital centers, Smile on Wheels mobile clinics, and STeP youth employability." },
+      { financialYear: "2023-24", status: "Filed", amountReceivedINR: 147139383, filingDate: "2024-11-15", auditorRemarks: "Primary healthcare van deployments, remedial nutrition for school children, adolescent hygiene kits." },
+      { financialYear: "2022-23", status: "Filed", amountReceivedINR: 138540000, filingDate: "2023-11-10", auditorRemarks: "Post-COVID learning loss recovery, smart classrooms, pediatric camps, and women micro-entrepreneurship." },
+      { financialYear: "2021-22", status: "Filed", amountReceivedINR: 164025000, filingDate: "2022-10-28", auditorRemarks: "COVID-19 pediatric care, ration kit distribution, tele-consultation support, and frontline equipment." }
     ],
     keyActivities: ["Mission Education for Underprivileged Children", "Smile on Wheels Primary Healthcare", "STeP Youth Livelihood Training"],
     contactEmail: "info@smilefoundationindia.org",
