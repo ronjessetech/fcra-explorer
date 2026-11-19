@@ -3,6 +3,7 @@ import {
   X, 
   Bookmark, 
   Printer, 
+  Download,
   Building2, 
   Landmark, 
   AlertTriangle, 
@@ -130,6 +131,21 @@ export const OrgDetailDrawer: React.FC<OrgDetailDrawerProps> = ({
           </div>
 
           <div className="flex items-center space-x-1.5 shrink-0">
+            {/* Download Dedicated PDF Due Diligence Report if available */}
+            {org.regNumber === '214250027' && (
+              <a
+                href="/reports/Bosco_Reach_Out_FCRA_214250027_Funding_Report.pdf"
+                download="Bosco_Reach_Out_FCRA_214250027_Funding_Report.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center space-x-1 px-2.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold shadow-xs transition-colors"
+                title="Download verified 3-page PDF due diligence report"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">PDF Report</span>
+              </a>
+            )}
+
             {/* Bookmark */}
             <button
               onClick={() => onToggleBookmark(org.regNumber)}
