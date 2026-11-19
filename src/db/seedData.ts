@@ -2055,11 +2055,14 @@ export const sampleOrganisations: Organisation[] = [
       bankName: "State Bank of India",
       branch: "New Delhi Main Branch, 11 Sansad Marg",
       ifsc: "SBIN0000691",
-      accountNumberMasked: "4012XXXX6618",
+      accountNumberMasked: "3999XXXX3028",
       isMainSBIAccount: true
     },
     filingHistory: [
-      { financialYear: "2023-24", status: "Filed", amountReceivedINR: 89000000, filingDate: "2024-11-20", auditorRemarks: "Cloth for Work and Not Just a Piece of Cloth initiatives." }
+      { financialYear: "2024-25", status: "Filed", amountReceivedINR: 177969539, filingDate: "2025-11-15", auditorRemarks: "Cloth for Work rural infrastructure, MY Pads menstrual dignity, and disaster relief across 27 States." },
+      { financialYear: "2023-24", status: "Filed", amountReceivedINR: 257170019, filingDate: "2024-11-20", auditorRemarks: "Disaster rehabilitation (Assam/Himachal floods), School to School education kits, and upcycling hubs." },
+      { financialYear: "2022-23", status: "Filed", amountReceivedINR: 228450000, filingDate: "2023-11-18", auditorRemarks: "Vikas Yojna community-led water body restoration, check dams, and tribal menstrual hygiene outreach." },
+      { financialYear: "2021-22", status: "Filed", amountReceivedINR: 284520000, filingDate: "2022-10-25", auditorRemarks: "Rahat COVID-19 second wave relief, dry rations, migrant family sustenance, and medical essentials." }
     ],
     keyActivities: ["Disaster Relief & Rehabilitation", "Rural Community Infrastructure (Vikas)", "Dignity in Menstrual Hygiene"],
     contactEmail: "mail@goonj.org",

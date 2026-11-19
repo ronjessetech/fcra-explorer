@@ -48,6 +48,10 @@ const DEDICATED_REPORTS: Record<string, { filename: string; title: string }> = {
   '020780159': {
     filename: 'Balipara_Foundation_FCRA_020780159_Funding_Report.pdf',
     title: 'Download verified 3-page PDF due diligence report for Balipara Foundation'
+  },
+  '231660618': {
+    filename: 'Goonj_FCRA_231660618_Funding_Report.pdf',
+    title: 'Download verified 3-page PDF due diligence report for Goonj'
   }
 };
 
