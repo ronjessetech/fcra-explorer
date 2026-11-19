@@ -12,6 +12,7 @@ import { OrgDetailDrawer } from './components/OrgDetailDrawer';
 import { AnalyticsDashboard } from './components/AnalyticsDashboard';
 import { DataImporterModal } from './components/DataImporterModal';
 import { LocalBackupModal } from './components/LocalBackupModal';
+import { ContactModal } from './components/ContactModal';
 import { Bookmark, ShieldAlert, Sparkles, Building2, CheckCircle2 } from 'lucide-react';
 
 const initialFilters: FilterOptions = {
@@ -32,6 +33,7 @@ export function App() {
   const [selectedOrg, setSelectedOrg] = useState<Organisation | null>(null);
   const [isImporterOpen, setIsImporterOpen] = useState(false);
   const [isBackupOpen, setIsBackupOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   // Live queries from Dexie IndexedDB
@@ -227,6 +229,7 @@ export function App() {
         setCurrentTab={setCurrentTab}
         onOpenImporter={() => setIsImporterOpen(true)}
         onOpenBackup={() => setIsBackupOpen(true)}
+        onOpenContact={() => setIsContactOpen(true)}
         onResetData={handleResetData}
         totalCount={organisations.length}
         bookmarkedCount={bookmarkedCount}
@@ -375,6 +378,12 @@ export function App() {
         onRestoreComplete={({ orgCount, notesCount }) => {
           showToast(`Restored ${orgCount} organisations and ${notesCount} notes from backup`);
         }}
+      />
+
+      {/* Contact Us Modal (Delivers via Resend API to fcra-explorer@flugelsoft.com) */}
+      <ContactModal
+        isOpen={isContactOpen}
+        onClose={() => setIsContactOpen(false)}
       />
 
       {/* Global Toast Notification */}

@@ -11,7 +11,8 @@ import {
   Sparkles,
   BarChart3,
   BookmarkCheck,
-  Search
+  Search,
+  Mail
 } from 'lucide-react';
 import { useNetworkStatus } from '../hooks/useNetworkStatus';
 import { usePWAInstall } from '../hooks/usePWAInstall';
@@ -21,6 +22,7 @@ interface AppHeaderProps {
   setCurrentTab: (tab: 'explorer' | 'watchlist' | 'analytics') => void;
   onOpenImporter: () => void;
   onOpenBackup: () => void;
+  onOpenContact: () => void;
   onResetData: () => void;
   totalCount: number;
   bookmarkedCount: number;
@@ -31,6 +33,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
   setCurrentTab,
   onOpenImporter,
   onOpenBackup,
+  onOpenContact,
   onResetData,
   totalCount,
   bookmarkedCount
@@ -144,6 +147,16 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
           >
             <Database className="w-3.5 h-3.5 text-indigo-400" />
             <span>Backup / Sync</span>
+          </button>
+
+          {/* Contact Us */}
+          <button
+            onClick={onOpenContact}
+            className="flex items-center space-x-1.5 px-3 py-1.5 bg-blue-900/60 hover:bg-blue-800 text-blue-200 text-xs font-semibold rounded-lg border border-blue-700/60 transition-colors shadow-xs"
+            title="Send an inquiry or report data update to Flugelsoft Labs"
+          >
+            <Mail className="w-3.5 h-3.5 text-blue-400" />
+            <span>Contact Us</span>
           </button>
 
           {/* Reset sample */}
