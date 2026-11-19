@@ -268,7 +268,10 @@ export const sampleOrganisations: Organisation[] = [
       isMainSBIAccount: true
     },
     filingHistory: [
-      { financialYear: "2023-24", status: "Filed", amountReceivedINR: 72000000, filingDate: "2024-11-12", auditorRemarks: "Eastern Himalayan Naturenomics forum, elephant corridor reforestation and agro-forestry." }
+      { financialYear: "2023-24", status: "Filed", amountReceivedINR: 72000000, filingDate: "2024-11-12", auditorRemarks: "Eastern Himalayan Naturenomics forum, elephant corridor reforestation, indigenous nurseries, and community agro-forestry." },
+      { financialYear: "2022-23", status: "Filed", amountReceivedINR: 58500000, filingDate: "2023-11-15", auditorRemarks: "Rural Futures (RuFu) model implementation, agro-forestry value chain support for fringe forest tribes." },
+      { financialYear: "2021-22", status: "Filed", amountReceivedINR: 46500000, filingDate: "2022-10-28", auditorRemarks: "Human-elephant conflict mitigation, post-COVID community resilience, medicinal plant propagation." },
+      { financialYear: "2020-21", status: "Filed", amountReceivedINR: 39000000, filingDate: "2021-10-22", auditorRemarks: "Eastern Himalayan ecological conservation, indigenous knowledge documentation, and emergency support." }
     ],
     keyActivities: ["Eastern Himalayan Naturenomics Concept Promotion", "Elephant Corridor Afforestation in Balipara Reserve", "Indigenous Knowledge & Agro-Forestry Documentation"],
     contactEmail: "info@baliparafoundation.com",

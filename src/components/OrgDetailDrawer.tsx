@@ -40,6 +40,17 @@ const availableComplianceTags = [
   'Exemption Verified'
 ];
 
+const DEDICATED_REPORTS: Record<string, { filename: string; title: string }> = {
+  '214250027': {
+    filename: 'Bosco_Reach_Out_FCRA_214250027_Funding_Report.pdf',
+    title: 'Download verified 3-page PDF due diligence report for Bosco Reach Out'
+  },
+  '020780159': {
+    filename: 'Balipara_Foundation_FCRA_020780159_Funding_Report.pdf',
+    title: 'Download verified 3-page PDF due diligence report for Balipara Foundation'
+  }
+};
+
 export const OrgDetailDrawer: React.FC<OrgDetailDrawerProps> = ({
   org,
   onClose,
@@ -132,14 +143,14 @@ export const OrgDetailDrawer: React.FC<OrgDetailDrawerProps> = ({
 
           <div className="flex items-center space-x-1.5 shrink-0">
             {/* Download Dedicated PDF Due Diligence Report if available */}
-            {org.regNumber === '214250027' && (
+            {DEDICATED_REPORTS[org.regNumber] && (
               <a
-                href="/reports/Bosco_Reach_Out_FCRA_214250027_Funding_Report.pdf"
-                download="Bosco_Reach_Out_FCRA_214250027_Funding_Report.pdf"
+                href={`/reports/${DEDICATED_REPORTS[org.regNumber].filename}`}
+                download={DEDICATED_REPORTS[org.regNumber].filename}
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center space-x-1 px-2.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold shadow-xs transition-colors"
-                title="Download verified 3-page PDF due diligence report"
+                title={DEDICATED_REPORTS[org.regNumber].title}
               >
                 <Download className="w-3.5 h-3.5" />
                 <span className="hidden sm:inline">PDF Report</span>
