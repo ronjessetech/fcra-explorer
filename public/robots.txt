@@ -1,0 +1,5 @@
+# robots.txt for https://fcra-explorer.flugelsoft.com
+User-agent: *
+Allow: /
+
+Sitemap: https://fcra-explorer.flugelsoft.com/sitemap.xml

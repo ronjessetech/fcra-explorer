@@ -7,16 +7,19 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg', 'pwa-192x192.png', 'pwa-512x512.png'],
+      includeAssets: ['favicon.ico', 'favicon-16x16.png', 'favicon-32x32.png', 'apple-touch-icon.png', 'masked-icon.svg', 'pwa-192x192.png', 'pwa-512x512.png', 'og-image.png'],
       manifest: {
-        name: 'FCRA Explorer & Compliance Tracker',
+        name: 'FCRA Explorer & Compliance Tracker | Flugelsoft Labs',
         short_name: 'FCRA Explorer',
         description: 'Offline-first search, analytics and compliance tracker for FCRA registered organisations in India',
         theme_color: '#1e3a8a',
         background_color: '#f8fafc',
         display: 'standalone',
         orientation: 'portrait-primary',
+        id: 'https://fcra-explorer.flugelsoft.com/',
         start_url: '/',
+        scope: '/',
+        categories: ['business', 'finance', 'productivity'],
         icons: [
           {
             src: '/pwa-192x192.png',

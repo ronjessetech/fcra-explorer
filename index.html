@@ -1,16 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FCRA Explorer & Compliance Tracker</title>
-    <meta name="description" content="Offline-first Public Data Explorer & Compliance Tracker for FCRA-registered organisations in India" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    
+    <!-- Primary Page Title & Meta Tags -->
+    <title>FCRA Explorer & Compliance Tracker | Flugelsoft Labs</title>
+    <meta name="title" content="FCRA Explorer & Compliance Tracker | Flugelsoft Labs" />
+    <meta name="description" content="Offline-first Public Data Explorer & Compliance Tracker for FCRA-registered organisations in India. Instant search across Assam, North East states, and national non-profits with Section 17 SBI NDMB banking and validity due diligence." />
+    <meta name="keywords" content="FCRA Explorer, FCRA India, FCRA registered NGOs, Assam FCRA, North East FCRA, MHA FCRA portal, Form FC-4, SBI New Delhi Main Branch, Section 17 FCRA, Flugelsoft Labs, non-profit compliance, CSR due diligence India, FCRA renewal" />
+    <meta name="author" content="Flugelsoft Labs" />
+    <meta name="publisher" content="Flugelsoft Labs" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="theme-color" content="#1e3a8a" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://fcra-explorer.flugelsoft.com" />
+
+    <!-- Favicons & Touch Icons -->
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-    <link rel="apple-touch-icon" href="/pwa-192x192.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/masked-icon.svg" color="#1e3a8a" />
+
+    <!-- Mobile & PWA Capabilities -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="FCRA Explorer" />
+    <meta name="application-name" content="FCRA Explorer & Compliance Tracker" />
+
+    <!-- GEO Meta Tags (Location Friendly for India & North East Regional Coverage) -->
+    <meta name="geo.region" content="IN" />
+    <meta name="geo.placename" content="India" />
+    <meta name="geo.position" content="20.5937;78.9629" />
+    <meta name="ICBM" content="20.5937, 78.9629" />
+
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fcra-explorer.flugelsoft.com" />
+    <meta property="og:site_name" content="FCRA Explorer & Compliance Tracker" />
+    <meta property="og:title" content="FCRA Explorer & Compliance Tracker | Flugelsoft Labs" />
+    <meta property="og:description" content="Offline-first PWA for exploring, searching, and tracking public records of FCRA-registered organisations in India with zero backend dependency." />
+    <meta property="og:image" content="https://fcra-explorer.flugelsoft.com/og-image.png" />
+    <meta property="og:image:secure_url" content="https://fcra-explorer.flugelsoft.com/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="FCRA Explorer & Compliance Tracker — Official Public Data Intelligence Platform by Flugelsoft Labs" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter / X Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://fcra-explorer.flugelsoft.com" />
+    <meta name="twitter:title" content="FCRA Explorer & Compliance Tracker | Flugelsoft Labs" />
+    <meta name="twitter:description" content="Offline-first PWA for exploring, searching, and tracking public records of FCRA-registered organisations in India with zero backend dependency." />
+    <meta name="twitter:image" content="https://fcra-explorer.flugelsoft.com/og-image.png" />
+    <meta name="twitter:creator" content="@flugelsoft" />
+    <meta name="twitter:site" content="@flugelsoft" />
+
+    <!-- Preconnect & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data (JSON-LD) for Search Engines -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "FCRA Explorer & Compliance Tracker",
+        "url": "https://fcra-explorer.flugelsoft.com",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "All",
+        "inLanguage": "en-IN",
+        "creator": {
+          "@type": "Organization",
+          "name": "Flugelsoft Labs",
+          "url": "https://flugelsoft.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Flugelsoft Labs"
+        },
+        "description": "An offline-first Progressive Web App that organizes, searches, and visualizes public data of FCRA-registered organisations in India with zero backend dependency.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "INR"
+        },
+        "featureList": [
+          "100% Offline IndexedDB Storage",
+          "Verified MHA Public Registration Records",
+          "Comprehensive North East States Coverage",
+          "Section 17 SBI New Delhi Main Branch Account Verification",
+          "Form FC-4 Annual Return Historical Filings",
+          "Local Private Watchlists and Due-Diligence Notes",
+          "Client-Side CSV and JSON Importer"
+        ],
+        "spatialCoverage": {
+          "@type": "Place",
+          "name": "India",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "20.5937",
+            "longitude": "78.9629"
+          }
+        }
+      }
+    </script>
   </head>
   <body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-blue-100 selection:text-blue-900 min-h-screen">
     <div id="root"></div>

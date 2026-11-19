@@ -467,11 +467,15 @@ export function App() {
 
           {/* Bottom copyright & offline badge */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2 text-[11px] text-slate-500 border-t border-slate-800/80">
-            <div className="flex items-center space-x-2 text-slate-400">
-              <span className="font-medium text-slate-300">© {new Date().getFullYear()} Flugelsoft Labs.</span>
+            <div className="flex flex-wrap items-center gap-x-2 text-slate-400">
+              <a href="https://flugelsoft.com" target="_blank" rel="noreferrer" className="font-semibold text-slate-200 hover:text-white transition-colors">
+                © {new Date().getFullYear()} Flugelsoft Labs.
+              </a>
               <span>All Rights Reserved.</span>
               <span className="text-slate-600">•</span>
-              <span>FCRA Explorer & Compliance Tracker</span>
+              <a href="https://fcra-explorer.flugelsoft.com" className="text-blue-400 hover:text-blue-300 transition-colors">
+                fcra-explorer.flugelsoft.com
+              </a>
             </div>
             <div className="flex items-center space-x-3 text-slate-400">
               <span className="inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
