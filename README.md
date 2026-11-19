@@ -66,6 +66,37 @@ npm run preview
 
 ---
 
+## Deploying to Cloudflare Pages
+
+This project is configured out-of-the-box for **Cloudflare Pages**:
+
+### Option 1: Automatic Git Integration (Recommended)
+1. Go to the [Cloudflare Dashboard](https://dash.cloudflare.com/) &rarr; **Compute (Workers & Pages)** &rarr; **Create application** &rarr; **Pages** &rarr; **Connect to Git**.
+2. Select repository: `ronjessetech/fcra-explorer`.
+3. Configure build settings:
+   - **Framework preset**: `Vite`
+   - **Build command**: `npm run build`
+   - **Build output directory**: `dist`
+   - **Node version**: Configured via `.node-version` (`20`).
+4. Click **Save and Deploy**. Cloudflare will automatically build and deploy the app with HTTPS and worldwide CDN edge routing.
+
+### Option 2: Direct Upload via Wrangler CLI
+```bash
+# Build the project
+npm run build
+
+# Deploy directly to Cloudflare Pages
+npx wrangler pages deploy dist --project-name=fcra-explorer
+```
+
+Included Cloudflare Configurations:
+- `public/_redirects`: Client-side single-page routing fallback to `index.html`.
+- `public/_headers`: Production security headers (`X-Frame-Options`, `X-Content-Type-Options`) and caching rules (immutable asset caching + non-cached Service Worker).
+- `wrangler.toml`: Cloudflare Pages project configuration.
+- `.node-version`: Node.js 20 build environment.
+
+---
+
 ## Data Source & Statutory Disclaimer
 
 - **Data Source**: Official public domain disclosures and gazette notifications published by the Foreigners Division, Ministry of Home Affairs (MHA), Government of India ([fcraonline.nic.in](https://fcraonline.nic.in)).
